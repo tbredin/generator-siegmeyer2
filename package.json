@@ -1,0 +1,45 @@
+{
+  "name": "generator-siegmeyer2",
+  "version": "0.1.0",
+  "description": "A static site generator using Gulp, Sass, Susy, and Siegmeyer typographic rhythm",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tbredin/generator-siegmeyer2.git"
+  },
+  "author": {
+    "name": "Thomas Bredin-Grey",
+    "email": "tbredin@gmail.com",
+    "url": "https://github.com/tbredin"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "siegmeyer",
+    "sass",
+    "susy",
+    "gulp"
+  ],
+  "homepage": "https://github.com/tbredin/generator-siegmeyer2",
+  "dependencies": {
+    "yeoman-generator": "^0.17.0",
+    "chalk": "^0.5.0",
+    "yosay": "^0.3.0"
+  },
+  "devDependencies": {
+    "chalk": "^0.5.1",
+    "mocha": "*"
+  },
+  "peerDependencies": {
+    "yo": ">=1.0.0"
+  }
+}

@@ -1,0 +1,160 @@
+// =====================================================
+// ------------ Siegmeyer II Core Variables ------------
+// =====================================================
+// @author Thomas Bredin-Grey <tom@studiothick>
+// Siegmeyer II: https://github.com/tbredin/Siegmeyer2
+// =====================================================
+
+
+// colors
+$site-colors: (
+    blue: #3a5ca4,
+    yellow: #fac011,
+    green: #267f67,
+    purple: #b15694,
+    purple_dark: #481d74,
+    red: #e4545c,
+    rose: #f54848,
+    grey: #f1f8fa,
+    steel: #4b4c57,
+    steel_light: #707287,
+    white: #fff
+);
+
+$site-color-names: map-keys($site-colors);
+
+// color variable helper
+@function site-color($color) {
+    @return map-get($site-colors, $color);
+}
+
+// debug grids
+$debug-color: tomato;
+
+// susy settings
+$susy: (
+    global-box-sizing: content-box,
+    math: fluid,
+    container-position: 0,
+    debug: (
+        color: transparentize($debug-color,0.6)
+    ),
+    use-custom: (
+        rem: true
+    )
+);
+
+$base-font-size: 16px;
+
+// responsive grid settings
+// gutters
+$column-width: 50px; // needs work - this doesn't represnt anything real
+
+// column number at each breakpoint
+$break-0-cols: 4;
+$break-1-cols: 8;
+$break-2-cols: 12;
+
+// breakpoint position - where the breakpoint starts
+$break-0-width: 0px;
+$break-1-width: 767px;
+$break-2-width: 1280px;
+
+// max width of grid container
+$break-0-max: 100%;
+$break-1-max: 100%;
+$break-2-max: 100%;
+
+// susy breakpoint layouts
+$break-0-layout: $break-0-cols ($column-width 0px);
+$break-1-layout: $break-1-cols ($column-width 0px);
+$break-2-layout: $break-2-cols ($column-width 0px);
+
+//interior gutters
+$gutter: 1.25rem;
+
+// Root font-sizes for each breakpoint. Set to half desired line-height of body text.
+$rootsizes: (
+    break-0: 13,   // 26px line-height body text
+    break-1: 15,   // 30px line-height body text
+    break-2: 17,   // 34px line-height body text
+);
+
+// map for flexible retrieval of breakpoint info
+$breakpoint-map: (
+    break-0: (
+        cols:       $break-0-cols,
+        start:      $break-0-width,
+        max:        $break-0-max,
+        layout:     $break-0-layout,
+        size:       map-get($rootsizes, break-0)
+    ),
+    break-1: (
+        cols:       $break-1-cols,
+        start:      $break-1-width,
+        max:        $break-1-max,
+        layout:     $break-1-layout,
+        size:       map-get($rootsizes, break-1)
+    ),
+    break-2: (
+        cols:       $break-2-cols,
+        start:      $break-2-width,
+        max:        $break-2-max,
+        layout:     $break-2-layout,
+        size:       map-get($rootsizes, break-2)
+    ),
+);
+
+// breakpoint count
+$breakpoint-count: length(map-keys($breakpoint-map));
+
+// breakpoint names
+$breaks: map-keys($breakpoint-map);
+
+// rootsizes
+$sizes: map-values($rootsizes);
+
+// set the initial breakpoint information referenced by type mixins
+$current-breakpoint: break-0;
+$current-root: map-get($rootsizes, break-0);
+
+// debug grid columns, baseline grid & breakpoints
+$debug-grid: true;
+$debug-baseline: true;
+$debug-breakpoints: true;
+
+// grid opacity
+$grid-opacity: 0.1;
+
+// image settings
+$image-path: '../images';
+$retina-suffix: '@2x';
+
+// Add typefaces here.
+// Add weight and style details too.
+// Set cap height to set to the baseline.
+$body-type: (
+    font-family: '"Source Sans", Helvetica, sans-serif',
+    regular: 100,
+    bold: 400,
+    italic: italic,
+    cap-height: 0.62
+);
+
+$display-type: (
+    font-family: 'Georga, serif',
+    regular: 400,
+    bold: 700,
+    cap-height: 0.65
+);
+
+$monospace-type: (
+    font-family: 'Menlo, monospace',
+    regular: 400,
+    cap-height: 0.68
+);
+
+
+// Here are some cap-height sizes to get you started:
+// Georgia: 0.66, Times / Times New Roman: 0.65, Palatino: 0.52
+// Lucida Grande: 0.72, Helvetica: 0.65, Verdana: 0.76, Tahoma: 0.76
