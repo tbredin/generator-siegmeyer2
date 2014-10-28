@@ -36,10 +36,10 @@ var Siegmeyer2Generator = yeoman.generators.Base.extend({
         this.directory("app/styles", "app/styles");
         this.directory("app/scripts", "app/scripts");
         this.directory("app/templates", "app/templates");
-        this.copy(".bowerrc", ".bowerrc");
+        this.copy("_bowerrc", ".bowerrc");
         this.copy("package.json", "package.json");
         this.copy("bower.json", "bower.json");
-        this.copy(".gitignore", ".gitignore");
+        this.copy("_gitignore", ".gitignore");
         this.copy("Gemfile", "Gemfile");
         this.copy("Gemfile.lock", "Gemfile.lock");
         this.copy("gulpfile.js", "gulpfile.js");
