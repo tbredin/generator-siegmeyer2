@@ -1,6 +1,6 @@
 {
   "name": "generator-siegmeyer2",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A static site generator using Gulp, Sass, Susy, and Siegmeyer typographic rhythm",
   "license": "MIT",
   "main": "app/index.js",
