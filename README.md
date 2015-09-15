@@ -1,4 +1,7 @@
 # generator-siegmeyer2 [![Build Status](https://secure.travis-ci.org/tbredin/generator-siegmeyer2.png?branch=master)](https://travis-ci.org/tbredin/generator-siegmeyer2)
+
+##IMPORTANT: Last version update: `0.0.0`
+
 Siegmeyer2 is a static SMACSS boilerplate using Susy grids, Siegmeyer typographic rhythm, and Gulp
 
 > [Yeoman](http://yeoman.io) generator
